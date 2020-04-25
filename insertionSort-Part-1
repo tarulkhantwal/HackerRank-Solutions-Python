@@ -1,0 +1,43 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the insertionSort1 function below.
+def insertionSort1(n, arr):
+    s=len(arr)
+    temp=arr[-1]
+    ins=0
+    for i in range(s-1,0,-1):
+        
+        if arr[i]<arr[i-1]:
+           
+            arr[i]=arr[i-1]
+            
+            for x in arr:
+                print(x,end=" ")
+            print()
+            arr[i-1]=temp
+            #print(i)
+        else:
+            arr[i]=temp
+            ins=1
+            for i in arr:
+                print(i,end=" ")
+            print()
+            break     
+           
+    if ins==0:
+        arr[0]=i
+    
+    for x in arr:
+            print(x,end=" ")    
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort1(n, arr)
