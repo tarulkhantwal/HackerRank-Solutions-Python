@@ -33,7 +33,7 @@ def insertionSort1(n, arr):
     if ins==0:
         arr[0]=i
     
-    for x in arr:
+        for x in arr:
             print(x,end=" ")    
 if __name__ == '__main__':
     n = int(input())
